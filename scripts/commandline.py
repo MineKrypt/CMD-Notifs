@@ -4,6 +4,7 @@ import pathlib #File navigation and tools
 import asyncio #Asyncronous actions
 import sys #System
 import argparse #Commandline
+import time
 from datetime import datetime #Date and time
 pathlib.Path(__file__).parent.absolute() #Pathlib init
 
@@ -14,17 +15,20 @@ realPath = dirPath/r'CMD-Notif' #Real working directory
 storePath = realPath/r'store' #Data storage directory
 scriptsPath = realPath/r'scripts' #Script storage directory
 parser = argparse.ArgumentParser() #Argparse init
-args = parser.parse_args()
+helptext = open(storePath/r'help.txt', 'r')
+readyhelptext = helptext.read()
+reset = scriptsPath/"reset.py"
 #!=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-if os.path.isfile(storePath/r'preferences.json') is True:
-    print('notif | Found preferences, loading.')
+text1 = input("notif >>> ")
+if text1 == 'help':
+    print(readyhelptext)
+    time.sleep(1)
+    exec(open(reset).read())
+elif text1 == 'setup':
+    print('notif | Entered setup.')
+    exec(open(scriptsPath/r"setup.py").read())
 else:
-    print('notif | Preferences not found! Creating now.')
-    open(realPath/r'store/preferences.json', 'x')
-
-
-prefs = open(storePath/r'preferences.json', 'r+')
-text = input("notif | Done. Press enter to continue.")
-exec(open(scriptsPath/r"junc1.py").read())
-
+    print('Unrecognised command!')
+    time.sleep(1)
+    exec(open(reset).read())

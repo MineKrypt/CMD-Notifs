@@ -1,0 +1,5 @@
+notif | = = = = = = = HELP = = = = = = =
+notif | Help : Displays this text.
+notif | Setup : Allows you to modify preferences.
+notif | Create : Creates a notification
+notif | Delete : Deletes a notification
