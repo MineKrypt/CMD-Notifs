@@ -18,17 +18,17 @@ parser = argparse.ArgumentParser() #Argparse init
 helptext = open(storePath/r'help.txt', 'r')
 readyhelptext = helptext.read()
 reset = scriptsPath/"reset.py"
+prefs = open(storePath/r'preferences.json', 'r')
 #!=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 text1 = input("notif >>> ")
 if text1 == 'help':
     print(readyhelptext)
-    time.sleep(1)
+    time.sleep(0.5)
     exec(open(reset).read())
 elif text1 == 'setup':
-    print('notif | Entered setup.')
-    exec(open(scriptsPath/r"setup.py").read())
+    exec(open(scriptsPath/r"junc-SET.py").read())
 else:
     print('Unrecognised command!')
-    time.sleep(1)
+    time.sleep(0.5)
     exec(open(reset).read())

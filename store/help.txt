@@ -1,5 +1,5 @@
 notif | = = = = = = = HELP = = = = = = =
 notif | Help : Displays this text.
-notif | Setup : Allows you to modify preferences.
-notif | Create : Creates a notification
-notif | Delete : Deletes a notification
+notif | Setup : Allows you to modify preferences. (DO THIS IF FIRST TIME OR NO WORK) (TBA)
+notif | Create : Creates a notification (TBA)
+notif | Delete : Deletes a notification (TBA)

@@ -15,16 +15,15 @@ storePath = realPath/r'store' #Data storage directory
 scriptsPath = realPath/r'scripts' #Script storage directory
 parser = argparse.ArgumentParser() #Argparse init
 args = parser.parse_args()
+prefs = open(storePath/r'preferences.json', 'r')
 #!=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 if os.path.isfile(storePath/r'preferences.json') is True:
     print('notif | Found preferences, loading.')
 else:
     print('notif | Preferences not found! Creating now.')
+    print('Thank you for using CMD-Notif!')
     open(realPath/r'store/preferences.json', 'x')
 
-
-prefs = open(storePath/r'preferences.json', 'r+')
 text = input("notif | Done. Press enter to continue.")
-exec(open(scriptsPath/r"junc1.py").read())
-
+exec(open(scriptsPath/r"junc-CL.py").read())

@@ -1,0 +1,5 @@
+setup | = = = = = = = SETUP HELP = = = = = = =
+setup | Help : Displays this text.
+setup | Exit : Returns to normal commandline.
+setup | (TBA)
+setup | (TBA)
