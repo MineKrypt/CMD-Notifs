@@ -1,6 +1,6 @@
 # CMD-Notifs
 Schedule notifications through a simple commandline interface! [WIN10 ONLY] 
 
-_Sorry about the terrible code, i'm a beginner._ :)
+_Sorry about the WACK code, i'm a beginner._ :)
 
 ## ___THIS IS NOWHERE NEAR DONE___
